@@ -1,6 +1,3 @@
-extern crate cfg_if;
-extern crate wasm_bindgen;
-
 mod utils;
 
 use cfg_if::cfg_if;
@@ -15,6 +12,6 @@ cfg_if! {
 }
 
 #[wasm_bindgen]
-pub fn greet() -> String {
-    "Hello, wasm-worker!".to_string()
+pub fn suffix(input: String) -> String {
+    aks_cluster_suffix::suffix(input.as_bytes())
 }
