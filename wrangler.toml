@@ -1,0 +1,4 @@
+name = "aks"
+type = "rust"
+account_id = "23ee123d911410d7ba4e043d987e74f4"
+workers_dev = true
