@@ -12,3 +12,11 @@ jobs:
     - uses: cloudflare/wrangler-action@1.1.0
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
+    - uses: actions/create-release@v1
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: ${{ github.ref }}
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
